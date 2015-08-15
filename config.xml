@@ -7,7 +7,7 @@
   <author email="envato@startapplabs.com" href="http://startapplabs.com/">
     StartApp Labs
   </author>
-  <content src="index.html"/>
+  <content src="www/index.html"/>
   <access origin="*"/>
   <allow-navigation href="*"/>
   <allow-intent href="*"/>
