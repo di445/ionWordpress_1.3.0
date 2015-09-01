@@ -72,8 +72,8 @@ angular.module('your_app_name.controllers', [])
 
   //map
   $scope.position = {
-    lat: 43.07493,
-    lng: -89.381388
+    lat: 44.977753,
+    lng: -93.265011
   };
 
   $scope.$on('mapInitialized', function(event, map) {
