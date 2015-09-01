@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.startapplabs.ionWordpress" version="1.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Cryns Family Music Archives (ionic framework)</name>
+  <name>ionWordpress</name>
   <description>
     An Ionic and Cordova project based on WordPress.
   </description>

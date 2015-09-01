@@ -391,7 +391,7 @@ angular.module('your_app_name.controllers', [])
     });
 
     //Always bring me the latest posts => page=1
-    PostService.getRecentAudio(1)
+    PostService.getRecentPosts(1)
     .then(function(data){
 
       $scope.totalPages = data.pages;
@@ -405,7 +405,7 @@ angular.module('your_app_name.controllers', [])
   $scope.loadMoreData = function(){
     $scope.page += 1;
 
-    PostService.getRecentAudio($scope.page)
+    PostService.getRecentPosts($scope.page)
     .then(function(data){
       //We will update this value in every request because new posts can be created
       $scope.totalPages = data.pages;
@@ -513,7 +513,7 @@ angular.module('your_app_name.controllers', [])
   $scope.loadMoreData = function(){
     $scope.page += 1;
 
-    PostService.getRecentAudio($scope.category.id, $scope.page)
+    PostService.getRecentPosts($scope.category.id, $scope.page)
     .then(function(data){
       //We will update this value in every request because new posts can be created
       $scope.totalPages = data.pages;

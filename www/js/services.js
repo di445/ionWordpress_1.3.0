@@ -18,27 +18,6 @@ angular.module('your_app_name.services', [])
 
     return deferred.promise;
   };
-  
-  
-  
-  
-	this.getRecentAudio = function(page) {
-		var deferred = $q.defer();
-		// http://music.cryns.com/?json=get_recent_posts&post_type=cryns_audio_file
-		$http.jsonp(WORDPRESS_API_URL + '?json=get_recent_posts&post_type=cryns_audio_file/' +
-			'&callback=JSON_CALLBACK')
-		.success(function(data) {
-		  	deferred.resolve(data);
-		})
-		.error(function(data) {
-		  	deferred.reject(data);
-		});
-		
-		return deferred.promise;
-	};
-	
-	
-	
 
   this.getUserGravatar = function(userId){
     var deferred = $q.defer();
