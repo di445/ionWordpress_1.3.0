@@ -93,7 +93,29 @@ angular.module('your_app_name.services', [])
 
     return deferred.promise;
   };
+  
+  
+  
+  this.getWidget = function(widgetId) {
+    var deferred = $q.defer();
+	
+	// http://music.cryns.com/api/widgets/get_sidebar/?sidebar_id=sidebar-1/
+    $http.jsonp(WORDPRESS_API_URL + 'widgets/get_sidebar/' +
+    '?sidebar_id='+ widgetId +
+    '&callback=JSON_CALLBACK')
+    .success(function(data) {
+      deferred.resolve(data);
+    })
+    .error(function(data) {
+      deferred.reject(data);
+    });
 
+    return deferred.promise;
+  };
+
+
+
+  
   this.shortenPosts = function(posts) {
     //we will shorten the post
     //define the max length (characters) of your post content
