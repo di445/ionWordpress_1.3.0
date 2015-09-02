@@ -1,0 +1,1 @@
+function onDeviceReady(){console.log("window.open works well")}document.addEventListener("deviceready",onDeviceReady,!1);
