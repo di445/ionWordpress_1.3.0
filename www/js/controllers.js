@@ -303,7 +303,7 @@ angular.module('your_app_name.controllers', [])
   $scope.doLogin = function(){
 
     $ionicLoading.show({
-      template: 'Loging in...'
+      template: 'Logging in...prepare for awesomeness...'
     });
 
     var user = {
