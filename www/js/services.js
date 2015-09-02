@@ -6,8 +6,7 @@ angular.module('your_app_name.services', [])
   this.getRecentPosts = function(page) {
     var deferred = $q.defer();
 
-    $http.jsonp(WORDPRESS_API_URL + 'get_recent_posts/' +
-      '?page='+ page +
+    $http.jsonp(WORDPRESS_API_URL + 'get_recent_posts/?post_type=cryns_audio_file/' +
       '&callback=JSON_CALLBACK')
     .success(function(data) {
       deferred.resolve(data);
