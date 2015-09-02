@@ -41,9 +41,11 @@ angular.module('your_app_name.services', [])
 
   this.getPost = function(postId) {
     var deferred = $q.defer();
-
+	
+	// http://music.cryns.com/api/get_post/?post_id=2869&post_type=cryns_audio_file/
     $http.jsonp(WORDPRESS_API_URL + 'get_post/' +
       '?post_id='+ postId +
+      '&post_type=cryns_audio_file' +
       '&callback=JSON_CALLBACK')
     .success(function(data) {
       deferred.resolve(data);
